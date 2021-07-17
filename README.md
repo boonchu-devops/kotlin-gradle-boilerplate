@@ -1,8 +1,9 @@
 # Kotlin Gradle Boilerplate code
 
-[![Build Status](https://travis-ci.org/jasoet/kotlin-gradle-boilerplate.svg?branch=master)](https://travis-ci.org/jasoet/kotlin-gradle-boilerplate)
-
 Boilerplate code for gradle based Kotlin application.
+
+## Links
+- [Sample](https://docs.gradle.org/current/samples/sample_building_kotlin_applications.html) Application
 
 ## Features
 - Kotlin/JVM 
