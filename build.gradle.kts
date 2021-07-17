@@ -15,7 +15,7 @@ plugins {
     kotlin("jvm") version "1.4.0"
     id("io.gitlab.arturbosch.detekt").version("1.13.1")
     id("com.github.johnrengelman.shadow").version("6.0.0")
-
+	id("com.google.cloud.tools.jib").version("3.1.2")
     jacoco
 }
 

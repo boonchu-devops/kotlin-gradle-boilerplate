@@ -4,6 +4,7 @@ Boilerplate code for gradle based Kotlin application.
 
 ## Links
 - [Sample](https://docs.gradle.org/current/samples/sample_building_kotlin_applications.html) Application
+- [Jib](https://github.com/GoogleContainerTools/jib/tree/master/jib-gradle-plugin) Plugin
 
 ## Features
 - Kotlin/JVM 
@@ -14,6 +15,7 @@ Boilerplate code for gradle based Kotlin application.
 - Code coverage using Jacoco 
 - Logging with Logback
 - Gradle Kotlin DSL
+- Use [jib](https://github.com/GoogleContainerTools/jib/tree/master/examples/spring-boot) to deploy docker image
 
 ## Requirements
 ### Install Java SDK 11
@@ -38,4 +40,19 @@ $ cd ${YOUR_PROJECT_NAME}
 $ gradle clean build
 $ gradle distZip --exclude-task test
 $ gradle run
+```
+
+## Building and push image with jib
+```sh
+# deploy docker image
+# https://github.com/GoogleContainerTools/jib/tree/master/examples/spring-boot
+$ gradle jib --image=boonchu/kotlin-gradle-boilerplate
+```
+
+## deploy to k8s
+```sh
+$ kubectl run kotlin-gradle-boilerplate --image=boonchu/kotlin-gradle-boilerplate --port=8080 --restart=Never
+$ k logs kotlin-gradle-boilerplate
+17 Jul 2021;22:21:10.455 [main] INFO  id.jasoet.boilerplate.Application - Some Log Message!
+Some Random Message!
 ```
