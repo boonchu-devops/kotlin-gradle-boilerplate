@@ -34,6 +34,7 @@ $ sdk install gradle
 ```sh
 $ git clone git@github.com:jasoet/kotlin-gradle-boilerplate.git ${YOUR_PROJECT_NAME}
 $ cd ${YOUR_PROJECT_NAME}
-$ ./gradlew clean build
+$ gradle clean build
+$ gradle distZip --exclude-task test
+$ gradle run
 ```
-
